@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <header>places to visit</header>
+        </div>
+        <div class="content">
+            <img class="image_1"
+                src="https://th.bing.com/th/id/OIP.xIUrM9gRboHMYBZ5fs_PwAHaLH?w=123&h=184&c=7&r=0&o=5&pid=1.7"
+                id="photo_1" alt="bake">
+
+            <img class="image_2"
+                src="https://th.bing.com/th/id/OIP.SfBVGyRUUPemZJ-q0sM0SgHaEo?w=89&h=90&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+                alt="ice_mountain">
+
+            <img class="image_3"
+                src="https://th.bing.com/th/id/OIP.6cUzSJ2SSxMpC0sY_elasAHaEK?w=89&h=90&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+                alt="sunset">
+
+            <img class="image_4"
+                src="https://th.bing.com/th/id/OIP.UtHSN-6ZVC2jgsm93G8ayQHaEo?w=89&h=89&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+                alt="rain_forest">
+
+        </div>
+        <div class="main_picture">
+            <img class="main_photo"
+                src="https://th.bing.com/th/id/OIP.xIUrM9gRboHMYBZ5fs_PwAHaLH?w=123&h=184&c=7&r=0&o=5&pid=1.7"
+                alt="bake">
+            <p class="caption">bake</p>
+        </div>
+    </div>
+    <script>
+        // gs
+        // JS section...
+        // in this section we have a photo and it is our main photo and after click in every photo they wiil show insted main photo 
+        // every photo can be main photo (we have 4 photos .)
+        // for doing this work we have two ways , both of them are like each other 
+        //  in one way we use from link like this:   document.querySelector(".main_photo").src = "https://th.bing.com/th/id/OIP.SfBVGyRUUPemZJ-q0sM0SgHaEo?w=89&h=90&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+        // but the another way we use from id or class like this:   document.querySelector(".main_photo").src = document.querySelector("#photo_1").src
+        console.log("Testing....");
+        console.log(document.querySelector(".image_1"));
+        document.querySelector(".main_photo").onmouseleave = function () {
+            document.querySelector(".main_photo").src = "https://th.bing.com/th/id/OIP.xIUrM9gRboHMYBZ5fs_PwAHaLH?w=123&h=184&c=7&r=0&o=5&pid=1.7"
+            document.querySelector(".main_photo").alt = "bake"
+            document.querySelector(".caption").innerText = "bake"
+
+        }
+
+        // section one
+        document.querySelector(".image_1").onclick = function () {
+            document.querySelector(".main_photo").src = document.querySelector(".image_1").src
+            document.querySelector(".main_photo").alt = document.querySelector(".image_1").alt
+            document.querySelector(".caption").innerText = document.querySelector(".image_1").alt
+        }
+        // section two
+        // in this section there is a photo that when we click on picture 2 , this picture will show insted main_photo 
+        // this work will happen for all of photoes 
+        // and after this work when we go to on main photo  (do not click) and go to picture 2 ( every photo ) or every where in our page, main photo will show again.
+        
+        document.querySelector(".image_2").onclick = function () {
+            document.querySelector(".main_photo").src = "https://th.bing.com/th/id/OIP.SfBVGyRUUPemZJ-q0sM0SgHaEo?w=89&h=90&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+            document.querySelector(".main_photo").alt = "ice_mountain"
+            document.querySelector(".caption").innerText = "ice_mountain"
+        }
+
+        // document.querySelector(".image_2").onclick = function () {
+        //     document.querySelector(".main_photo").src = document.querySelector(".image_2").src
+        //     document.querySelector(".main_photo").alt = document.querySelector(".image_2").alt
+        //     document.querySelector(".caption").innerText = document.querySelector(".image_2").alt
+        // }
+        
+        //section three
+        // this section is like  section two 
+        document.querySelector(".image_3").onclick = function () {
+            document.querySelector(".main_photo").src = "https://th.bing.com/th/id/OIP.6cUzSJ2SSxMpC0sY_elasAHaEK?w=89&h=90&c=1&rs=1&qlt=90&r=0&pid=InlineBlock"
+            document.querySelector(".main_photo").alt = "sunest"
+            document.querySelector(".caption").innerText = "sunest"
+        }
+
+        // document.querySelector(".image_3").onclick = function () {
+        //     document.querySelector(".main_photo").src = document.querySelector(".image_3").src
+        //     document.querySelector(".main_photo").alt = document.querySelector(".image_3").alt
+        //     document.querySelector(".caption").innerText = document.querySelector(".image_3").alt
+        // }
+
+        // section four
+        document.querySelector(".image_4").onclick = function () {
+            document.querySelector(".main_photo").src = document.querySelector(".image_4").src
+            document.querySelector(".main_photo").alt = document.querySelector(".image_4").alt
+            document.querySelector(".caption").innerText = document.querySelector(".image_4").alt
+        }
+    </script>
+</body>
+
+</html>
